@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+#icon {
+  font-size: 200%;
+}
+
+.button-login:hover{
+  background-color: rgb(255, 255, 255,0.8)!important;
+}
+.button-login{
+  background-color: rgb(255, 255, 255)!important;
+  color: #007bff!important;
+}
+.btn {
+  background-color: aqua;
+}
+.navbar {
+    background-color: #007bff; /* Màu nền cho navbar */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white; /* Màu chữ cho các liên kết */
+    padding: 15px 20px; /* Khoảng cách xung quanh liên kết */
+}
+
+.dropdown-toggle .img-profile {
+    width: 30px; /* Kích thước của ảnh đại diện */
+    height: 30px; /* Kích thước của ảnh đại diện */
+    border-radius: 50%; /* Đường viền tròn cho ảnh đại diện */
+    margin-left: 10px; /* Khoảng cách giữa tên và ảnh */
+}
+.dropdown.no-arrow .dropdown-toggle::after {
+  display: none;
+}
+
+.navbar-text {
+  text-shadow: 0 0 10px orange;
+  color: coral;
+}
+
+:root {
+  --primary-color: #2c3855;
+  --primary-color-dark: #435681;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color:  #f5f5f5; 
+}
+
+nav {
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  font-weight: 500;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+.header__container {
+  padding: 1rem 1rem 5rem 1rem;
+}
+
+.icon {
+  font-size: 30px; /* Kích thước biểu tượng */
+  margin: 10px 0; /* Khoảng cách giữa các biểu tượng */
+  text-align: center; /* Căn giữa chữ chú thích */
+  color: white; /* Màu sắc biểu tượng */
+  transition: transform 0.3s; /* Hiệu ứng chuyển động khi hover */
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Tăng kích thước khi hover */
+}
+
+.icon span {
+  margin-top: 5px!important; /* Khoảng cách giữa biểu tượng và chữ chú thích */
+  color: white!important; /* Màu chữ */
+}
+
+.facebook {
+  color: #0050fd;
+}
+
+.instagram {
+  color: #e1306c; 
+}
+
+.tiktok {
+  color: #000000; 
+}
+
+.youtube {
+  color: #FF0000; 
+}
+.link-hover {
+  transition: color 0.3s, 
+  text-shadow 0.3s;
+  text-decoration: none;
+}
+
+.link-hover:hover {
+  color: #ffd700; /* Màu sắc khi hover (vàng) */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Bóng chữ khi hover */
+}
+
+.signature {
+  font-style: italic; /* Kiểu chữ nghiêng */
+  font-size: 14px; /* Kích thước chữ */
+  color: #f8f9fa; /* Màu chữ */
+}
+
+.header__image__container {
+  position: relative;
+  min-height: 500px;
+  background-image: linear-gradient(
+      to right,
+      rgba(0,123,255, 0.5),
+      rgba(226, 229, 237, 0.3)
+    ),
+    url("https://pistachiohotel.com/UploadFile/Gallery/Overview/a3.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+}
+
+.header__content {
+  max-width: 600px;
+  padding: 5rem 2rem;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.header__content p {
+  color: var(--extra-light);
+}
+.nav-link:hover {
+  text-decoration: underline;
+  /* Hiệu ứng hover */
+}
+
+.popular__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.popular__card {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.popular__content {
+  padding: 1rem;
+}
+
+.popular__card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.popular__card__header h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.popular__content p {
+  color: var(--text-light);
+}
+
+.client {
+  background-color: var(--extra-light);
+}
+
+.client__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.client__card {
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.client__card img {
+  max-width: 80px;
+  margin: auto;
+  margin-bottom: 1rem;
+  border-radius: 100%;
+}
+
+.client__card p {
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.reward__container {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reward__container p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.reward__container h4 {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.reward__btn {
+  padding: 1rem 3rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reward__btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.footer {
+  background-color: var(--extra-light);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 5rem;
+}
+
+.footer__col h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__col p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer__col p:hover {
+  color: var(--text-dark);
+}
+
+.footer__bar {
+  position: relative;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-align: right;
+  overflow: hidden;
+}
+
+.footer__bar::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 28rem;
+  transform: translateY(-50%);
+  width: 20rem;
+  height: 2px;
+  background-color: var(--text-light);
+}
+
+
+@media (width < 600px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header__container {
+    padding-bottom: 25rem;
+  }
+
+  .booking__container {
+    flex-direction: column;
+    bottom: -25rem;
+  }
+
+  .booking__container form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .popular__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .client__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__container {
+    gap: 2rem;
+  }
+}
