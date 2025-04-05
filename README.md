@@ -19,7 +19,6 @@ Hotel Management System là một ứng dụng web được xây dựng bằng P
 
 ### 3. Xác thực và phân quyền
 - Đăng ký, đăng nhập, đăng xuất.
-- Quên mật khẩu (Forgot Password).
 - Phân quyền: Admin và Customer.
 
 ## Công nghệ sử dụng
