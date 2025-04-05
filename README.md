@@ -1,66 +1,76 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Hotel Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Hotel Management System là một ứng dụng web được xây dựng bằng PHP (Laravel) nhằm hỗ trợ quản lý khách sạn, bao gồm đặt phòng, quản lý khách hàng, nhân viên, hóa đơn, dịch vụ, và các chức năng khác. Dự án này cung cấp giao diện người dùng thân thiện cho cả khách hàng và quản trị viên, cùng với hệ thống xác thực và phân quyền mạnh mẽ.
 
-## About Laravel
+## Tính năng chính
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 1. Đặt phòng (Booking)
+- Hiển thị danh sách phòng trống.
+- Đặt phòng với các bước: chọn phòng, thêm dịch vụ bổ sung, xác nhận thông tin, thanh toán.
+- Xem lịch sử đặt phòng của khách hàng.
+- Hỗ trợ mã khuyến mãi (Promotions).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 2. Quản trị viên (Admin)
+- **Dashboard**: Hiển thị doanh thu (ngày/tháng), số hóa đơn đã thanh toán/chưa thanh toán, dịch vụ phổ biến nhất.
+- **Quản lý khách hàng**: Thêm, sửa, xóa thông tin khách hàng.
+- **Quản lý nhân viên, phòng, dịch vụ, thiết bị, ca làm việc, khách sạn**: CRUD (Create, Read, Update, Delete).
+- **Quản lý hóa đơn và đơn hàng**: Theo dõi trạng thái thanh toán và đơn đặt phòng.
+- **Quản lý khuyến mãi**: Tạo và áp dụng mã giảm giá.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 3. Xác thực và phân quyền
+- Đăng ký, đăng nhập, đăng xuất.
+- Quên mật khẩu (Forgot Password).
+- Phân quyền: Admin và Customer.
 
-## Learning Laravel
+## Công nghệ sử dụng
+- **Backend**: PHP (Laravel Framework)
+- **Frontend**: Blade Templates, Bootstrap, FontAwesome, Chart.js
+- **Database**: MySQL (migration và seeder có sẵn)
+- **Middleware**: Xác thực (Auth), phân quyền (Role-based)
+- **Thư viện khác**: Pusher (thông báo real-time), Carbon (xử lý thời gian)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Cấu trúc dự án
+- **Routes**: `routes/web.php` - Định nghĩa các tuyến đường cho ứng dụng.
+- **Controllers**:
+  - `BookingController.php` - Quản lý quy trình đặt phòng.
+  - `DashBoardController.php` - Hiển thị dashboard admin.
+  - `CustomerController.php` - Quản lý khách hàng (CRUD mẫu).
+  - `LoginController.php` & `RegisterController.php` - Xác thực người dùng.
+- **Views**:
+  - Giao diện khách hàng: `booking/index.blade.php`, `booking/rooms.blade.php`, v.v.
+  - Giao diện admin: `dashboard/index.blade.php`, `customer/index.blade.php`, v.v.
+- **Migrations**: `database/migrations` - Tạo cấu trúc bảng cơ sở dữ liệu.
+- **Seeders**: `database/seeders` - Dữ liệu mẫu cho hệ thống.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Hướng dẫn cài đặt
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Clone repository**:
+   ```bash
+   git clone <repository-url>
+   cd hotel-management-system
+   Cài đặt dependencies:
+   
+composer install
+npm install
+Cấu hình môi trường:
+Sao chép file .env.example thành .env.
+Cập nhật thông tin cơ sở dữ liệu và các biến môi trường khác (Pusher, Mail, v.v.).
 
-## Laravel Sponsors
+cp .env.example .env
+php artisan key:generate
+Chạy migration và seeder:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+php artisan migrate
+php artisan db:seed --class=HotelManagementSeeder
+Khởi động ứng dụng:
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+php artisan serve
+Truy cập: http://localhost:8000.
+Cách sử dụng
+Khách hàng: Truy cập /booking để xem danh sách phòng và đặt phòng.
+Quản trị viên: Đăng nhập với tài khoản có vai trò admin để truy cập /dashboard và các chức năng quản lý.
+Dữ liệu mẫu
+Admin:
+Email: huy@gmail.com | Password: 12345
+Phòng: 101, 102, 201, v.v. với trạng thái available.
+Dịch vụ: Giặt là (50,000 VNĐ), Spa (200,000 VNĐ), v.v.
