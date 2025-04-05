@@ -54,24 +54,20 @@ composer install
 npm install
 ````
 Cấu hình môi trường:
-Sao chép file .env.example thành .env.
-Cập nhật thông tin cơ sở dữ liệu và các biến môi trường khác (Pusher, Mail, v.v.).
+Sử dụng Laragon hoặc Xampp để chưa Mysql
 
-cp .env.example .env
-php artisan key:generate
+
 Chạy migration và seeder:
-
-php artisan migrate
-php artisan db:seed --class=HotelManagementSeeder
+```bash
+php artisan migrate:refresh --seed
+```
 Khởi động ứng dụng:
-
-php artisan serve
-Truy cập: http://localhost:8000.
+Truy cập google hoặc các trình duyệt khác: http://quanlykhachsan.test/customer
 Cách sử dụng
 Khách hàng: Truy cập /booking để xem danh sách phòng và đặt phòng.
 Quản trị viên: Đăng nhập với tài khoản có vai trò admin để truy cập /dashboard và các chức năng quản lý.
 Dữ liệu mẫu
 Admin:
-Email: huy@gmail.com | Password: 12345
+Email: huy@gmail.com | Password: 12345 (Admin)
 Phòng: 101, 102, 201, v.v. với trạng thái available.
 Dịch vụ: Giặt là (50,000 VNĐ), Spa (200,000 VNĐ), v.v.
