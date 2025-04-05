@@ -74,9 +74,7 @@ Quản trị viên: Đăng nhập với tài khoản có vai trò admin để tr
 
 Dữ liệu mẫu
 
-Admin:
-
-Email: huy@gmail.com | Password: 12345 (Admin)
+Admin: Email: huy@gmail.com | Password: 12345
 
 Phòng: 101, 102, 201, v.v. với trạng thái available.
 
