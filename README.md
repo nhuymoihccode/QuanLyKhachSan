@@ -54,6 +54,7 @@ npm install
 ````
 Cấu hình môi trường:
 Sử dụng Laragon hoặc Xampp để chứa Mysql
+
 Khởi chạy Laragon hoặc Xampp
 
 ### Chạy migration và seeder:
