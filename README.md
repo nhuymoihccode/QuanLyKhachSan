@@ -45,13 +45,14 @@ Hotel Management System là một ứng dụng web được xây dựng bằng P
 ## Hướng dẫn cài đặt
 
 1. **Clone repository**:
-   ```bash
+   
    git clone <repository-url>
    cd hotel-management-system
    Cài đặt dependencies:
-   
+```bash   
 composer install
 npm install
+````
 Cấu hình môi trường:
 Sao chép file .env.example thành .env.
 Cập nhật thông tin cơ sở dữ liệu và các biến môi trường khác (Pusher, Mail, v.v.).
