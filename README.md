@@ -61,9 +61,15 @@ Chạy migration và seeder:
 php artisan migrate:refresh --seed
 ```
 Khởi động ứng dụng:
-Truy cập google hoặc các trình duyệt khác: http://quanlykhachsan.test/customer
+
+Truy cập google hoặc các trình duyệt khác:
+
+http://quanlykhachsan.test/customer
+
+
 Cách sử dụng
 Khách hàng: Truy cập /booking để xem danh sách phòng và đặt phòng.
+
 Quản trị viên: Đăng nhập với tài khoản có vai trò admin để truy cập /dashboard và các chức năng quản lý.
 Dữ liệu mẫu
 Admin:
